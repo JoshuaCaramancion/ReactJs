@@ -35,9 +35,14 @@ table {
 	font-size: 12px;
 	line-height: 24px;
 	margin: 30px auto;
-	text-align: left;
-	width: 800px;
+	text-align: center;
+	width: 90%;
 }	
+
+.wrapper {
+  margin: 0 auto;
+  padding: 20px 50px;
+}
 
 th {
 	background: linear-gradient(#777, #444);
@@ -141,7 +146,7 @@ tr:last-of-type td:last-child {
 /*buttons*/
 #msform .action-button {
 	width: 97%;
-	background: #27AE60;
+	background: #444;
 	font-weight: bold;
 	color: white;
 	border: 0 none;
@@ -152,4 +157,38 @@ tr:last-of-type td:last-child {
 }
 #msform .action-button:hover, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+.editBtn{
+  font-family: "Helvetica Neue", Helvetica;
+  background: #999;
+  border: 0;
+  padding: 5px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.5 ease;
+  transition: all 0.5 ease;
+  cursor: pointer;
+}
+
+.editBtn:hover {
+  background: #444;
+  transition: 0.5s;
+}
+
+.deleteBtn{
+  font-family: "Helvetica Neue", Helvetica;
+  background: #999;
+  border: 0;
+  padding: 5px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.5 ease;
+  transition: all 0.5 ease;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background: #444;
+  transition: 0.5s;
 }

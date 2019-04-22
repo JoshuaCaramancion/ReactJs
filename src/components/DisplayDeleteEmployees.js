@@ -17,6 +17,7 @@ class DisplayEmployees extends Component {
       console.log(res);
     });
   }
+
   deleteEmployee(id) {
     try {
       axios({
@@ -25,6 +26,7 @@ class DisplayEmployees extends Component {
       }).then(response => {
         console.log(response);
         console.log(response.data);
+        window.location.reload();
       });
     } catch (err) {
       console.log('Error on deleting employee');
@@ -52,8 +54,16 @@ class DisplayEmployees extends Component {
               <td>{item.employee_salary} </td>
               <td>{item.employee_age} </td>
               <td>
-                <button>Edit</button>
-                <button>Delete</button>
+                <button>Edit</button>&nbsp;
+                <button
+                  className='action-button'
+                  onClick={() => {
+                    this.deleteEmployee(item.id);
+                    alert('Item Deleted');
+                  }}
+                >
+                  DELETE
+                </button>
               </td>
             </tr>
           ))}
@@ -61,6 +71,5 @@ class DisplayEmployees extends Component {
       </table>
     );
   }
-  // <button onClick={this.deleteEmployee(item.id)}>Delete</button>
 }
 export default DisplayEmployees;

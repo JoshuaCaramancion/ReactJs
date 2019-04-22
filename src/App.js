@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import axios from 'axios';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import DisplayEmployees from './components/DisplayEmployees';
+import AddEmployee from './components/AddEmployee';
+// import DeleteEmployee from './components/DeleteEmployee';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <header className='header'>
+        <BrowserRouter>
+          <Link to='/'>Home</Link>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <Link to='/addEmployee'>Add Employee</Link>
+          <Route path='/addEmployee' component={AddEmployee} />
+          <Route path='/' exact component={DisplayEmployees} />
+        </BrowserRouter>
+      </header>
     );
   }
 }

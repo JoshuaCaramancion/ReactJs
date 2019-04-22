@@ -18,14 +18,12 @@ class AddEmployee extends Component {
     };
 
     axios
-      .post(`http://dummy.restapiexample.com/api/v1/create`, details)
+      .put(`http://dummy.restapiexample.com/api/v1/update@/${id}`, details)
       .then(res => {
         console.log(res);
         console.log(res.data);
-        window.location.replace('/');
       });
   };
-
   render() {
     return (
       <div id='msform'>
@@ -60,4 +58,4 @@ class AddEmployee extends Component {
   }
 }
 
-export default AddEmployee;
+export default UpdateEmployee;

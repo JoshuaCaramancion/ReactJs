@@ -54,9 +54,9 @@ class DisplayEmployees extends Component {
               <td>{item.employee_salary} </td>
               <td>{item.employee_age} </td>
               <td>
-                <button>Edit</button>&nbsp;
+                <button className='editBtn'>Edit</button>&nbsp;
                 <button
-                  className='action-button'
+                  className='deleteBtn'
                   onClick={() => {
                     this.deleteEmployee(item.id);
                     alert('Item Deleted');

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-// import axios from 'axios';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import DisplayDeleteEmployees from './components/DisplayDeleteEmployees';
 import AddEmployee from './components/AddEmployee';
@@ -9,15 +8,17 @@ import AddEmployee from './components/AddEmployee';
 class App extends Component {
   render() {
     return (
-      <header className='header'>
+      <div>
         <BrowserRouter>
-          <Link to='/'>Home</Link>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <Link to='/addEmployee'>Add Employee</Link>
+          <center>
+            <Link to='/'>Home</Link>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Link to='/addEmployee'>Add Employee</Link>
+          </center>
           <Route path='/addEmployee' component={AddEmployee} />
           <Route path='/' exact component={DisplayDeleteEmployees} />
         </BrowserRouter>
-      </header>
+      </div>
     );
   }
 }
